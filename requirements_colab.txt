@@ -1,0 +1,26 @@
+# Requisitos mínimos para AICoverGen Remaster + Applio en Google Colab Free.
+# No se fija torch: Colab ya trae una rueda CUDA compatible con su runtime.
+accelerate>=0.33.0
+faiss-cpu>=1.7.4
+ffmpeg-python>=0.2.0
+gradio>=4.44.0
+librosa>=0.10.2
+matplotlib-inline>=0.1.7
+noisereduce>=3.0.2
+numpy>=1.26,<2.1
+onnxruntime-gpu>=1.17.0; platform_system == "Linux"
+pedalboard>=0.9.16
+pydub>=0.25.1
+pyworld>=0.3.4
+requests>=2.31.0
+scipy>=1.11.4
+soundfile>=0.12.1
+sox>=1.4.1
+soxr>=0.3.7
+torchcrepe>=0.0.23
+torchfcpe>=0.0.4
+tqdm>=4.66.0
+transformers>=4.44.0
+wget>=3.2
+yt-dlp>=2024.8.6
+spaces>=0.30.0

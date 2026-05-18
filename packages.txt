@@ -1,0 +1,4 @@
+ffmpeg
+sox
+libsox-dev
+libsndfile1
