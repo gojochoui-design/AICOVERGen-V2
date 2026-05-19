@@ -67,7 +67,7 @@
 </tr>
 <tr>
 <td align="center"><b>3</b></td>
-<td>Run the code cell and upload your ZIP file</td>
+<td>RUN and wait</td>
 </tr>
 <tr>
 <td align="center"><b>4</b></td>
