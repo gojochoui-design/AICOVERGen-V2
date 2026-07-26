@@ -1,0 +1,58 @@
+# Requisitos mínimos para AICoverGen Remaster + Applio en Google Colab Free.
+# No se fija torch: Colab ya trae una rueda CUDA compatible con su runtime.
+#
+# El paquete `audio_separator` 0.44.5 está VENDOREADO en el repo (carpeta
+# `audio_separator/`), así que no se instala desde PyPI. Sí necesitamos
+# instalar todas sus dependencias, que se listan más abajo en la sección
+# "Dependencias de audio_separator (vendoreado)".
+
+# ── Dependencias principales del proyecto ────────────────────────────────────
+accelerate>=0.33.0
+faiss-cpu>=1.7.4
+ffmpeg-python>=0.2.0
+gradio>=4.44.0
+librosa>=0.10.2
+matplotlib-inline>=0.1.7
+noisereduce>=3.0.2
+numpy>=1.26,<2.1
+pedalboard>=0.9.16
+pydub>=0.25.1
+pyworld>=0.3.4
+requests>=2.31.0
+scipy>=1.11.4
+soundfile>=0.12.1
+sox>=1.4.1
+soxr>=0.3.7
+torchcrepe>=0.0.23
+torchfcpe>=0.0.4
+tqdm>=4.66.0
+transformers>=4.44.0
+wget>=3.2
+yt-dlp>=2024.8.6
+spaces>=0.30.0
+
+# ── Dependencias de audio_separator (vendoreado) ────────────────────────────
+# Necesarias para que funcione `audio_separator/` con los modelos Mel-RoFormer
+# de becruily. Tomadas del pyproject.toml de audio_separator 0.44.5.
+#
+# NOTA sobre onnxruntime: los modelos Mel-RoFormer (.ckpt) usan **torch** para
+# inferir, NO onnxruntime. onnxruntime sólo lo necesitaríamos para los modelos
+# MDX/VR/MDXC-onnx antiguos, que ya no usamos. Hemos parcheado el paquete
+# vendoreado para que `import onnxruntime` sea opcional (try/except), así que
+# NO hace falta instalar onnxruntime ni onnxruntime-gpu.
+#
+# Si en el futuro vuelves a usar modelos .onnx, descomenta una de estas dos:
+#   onnxruntime>=1.17.0                                  # CPU
+#   onnxruntime-gpu>=1.17.0,<1.20; platform_system == "Linux"  # GPU (CUDA 12)
+samplerate==0.1.0
+six>=1.16
+onnx-weekly
+onnx2torch-py313>=1.6
+julius>=0.2
+einops>=0.7
+pyyaml
+ml_collections
+resampy>=0.4
+beartype>=0.18.5
+rotary-embedding-torch>=0.6.1
+diffq>=0.2; platform_system != "Windows"

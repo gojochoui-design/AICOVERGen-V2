@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Modelos y outputs (NO se commitean, se descargan en runtime)
+separator_models/*.ckpt
+separator_models/*.onnx
+separator_models/*.pth
+separator_models/*.yaml.bak
+mdxnet_models/
+rvc_models/*.pth
+rvc_models/*.index
+rvc_models/*.pt
+song_output/
+
+# Audio temporal
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.opus
+*.m4a
+*.aiff
+*.ac3
+!audio_separator/**/*.wav
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
